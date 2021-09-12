@@ -14,27 +14,28 @@
     display: flex;
   }
 
-  &__list-item + .menu__list-item {
+  &__list-item+.menu__list-item {
     padding-left: 35px;
   }
 
   &__list-link {
+    padding: 0 2px 1px;
     color: $title;
     text-transform: uppercase;
     transition: all 0.3s;
-    @extend %quicksand-400;
+    @extend %roboto-400;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
-    @extend %quicksand-500;
+    @extend %roboto-700;
   }
 }
 
@@ -45,16 +46,16 @@
     position: relative;
   }
 
-  &__link + .user-nav__link {
+  &__link+.user-nav__link {
     padding-left: 25px;
   }
 
   &__num {
     position: absolute;
     width: 20px;
-    height: 20px; 
+    height: 20px;
     border-radius: 50%;
-    background-color: $accent; 
+    background-color: $accent;
     right: -14px;
     top: -9px;
     color: #fff;
