@@ -4,16 +4,18 @@
 @import 'libs';
 @import 'global';
 
-@import 'block/header';
-@import 'block/top-slider';
-@import 'block/categories';
-@import 'block/video-fashion';
-@import 'block/product';
-@import 'block/promo';
-@import 'block/blog';
+@import 'main/header';
+@import 'main/top-slider';
+@import 'main/categories';
+@import 'main/video-fashion';
+@import 'main/product';
+@import 'main/promo';
+@import 'main/blog';
+
+@import 'login/login';
 
 
 
 
-@import 'block/footer';
+@import 'main/footer';
 @import 'media';
