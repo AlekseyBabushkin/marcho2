@@ -1,5 +1,29 @@
 $(function(){
 
+  $('.prodDetalis-tabs__top-item').on('click', function(e){
+    e.preventDefault();
+    $('.prodDetalis-tabs__top-item').removeClass('prodDetalis-tabs__top-item--active');
+    $(this).addClass('prodDetalis-tabs__top-item--active');
+
+    $('.prodDetalis-tabs__content-item').removeClass('prodDetalis-tabs__content-item--active');
+    $($(this).attr('href')).addClass('prodDetalis-tabs__content-item--active');
+  })
+
+  $('.prodDetalis-slide__thumb').slick({
+    asNavFor:'.prodDetalis-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  })
+  $('.prodDetalis-slide__big').slick({
+    asNavFor:'.prodDetalis-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true, // - плавное переключение слайда
+  })
+
   $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
@@ -13,7 +37,7 @@ $(function(){
     $('.product-item').removeClass('product-item--list')
   });
 
-  $('.shop-content__filter-sort, .shop-content__filter-show').styler({});
+  $('.shop-content__filter-sort, .shop-content__filter-show, .prodDetalis-item__num').styler({});
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
